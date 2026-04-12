@@ -59,6 +59,11 @@ app.get("/", (req, res) => {
   res.send("ATS Backend Running 🚀");
 });
 
+// ✅ ADD THIS (for uptime robot)
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+});
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
